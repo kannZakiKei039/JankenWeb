@@ -1,4 +1,4 @@
-package game7;
+package game7;//DBと接続
 
 import java.sql.Connection;
 import java.sql.DriverManager;

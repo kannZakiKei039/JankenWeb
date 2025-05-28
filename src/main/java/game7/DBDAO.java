@@ -1,4 +1,4 @@
-package game7;
+package game7;//対戦履歴をDBに保存
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,7 @@ import jakarta.servlet.ServletException;
 
 public class DBDAO {
 	public void insertMatch(int playerHand,int computerHand) throws ServletException {
-		//対戦履歴をDBに保存
+		
 		String sql = "insert into match_history (play_date,play_hand,computer_hand) values(?,?,?)";
 
 		try (

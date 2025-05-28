@@ -3,7 +3,7 @@ package game7.model;
 import java.io.Serializable;
 
 public class Mutter implements Serializable {
-	private String userName;
+	private String userName;//ユーザー名
 	
 	public Mutter() {}
 

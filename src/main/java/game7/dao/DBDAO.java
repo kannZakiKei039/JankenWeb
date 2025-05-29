@@ -1,4 +1,4 @@
-package game7;//対戦履歴をDBに保存
+package game7.dao;//対戦履歴をDBに保存
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,6 +7,8 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 import jakarta.servlet.ServletException;
+
+import game7.DBManager;
 
 public class DBDAO {
 	public void insertMatch(int playerHand,int computerHand) throws ServletException {

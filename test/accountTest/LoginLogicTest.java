@@ -30,7 +30,7 @@ class LoginLogicTest {
         String password="0000";
 
         UserAccount result = logic.login(loginId,password);
-        assertNotNull(result, "ログイン失敗と判定されるべき");
+        assertNull(result, "ログイン失敗と判定されるべき");
 	}
 
 }

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import game7.model.AccountDAO;
+import game7.dao.UserDAO;
 import game7.model.UserAccount;
 
 class AccountDAOTest {
@@ -14,7 +14,7 @@ class AccountDAOTest {
 	        // 実際に存在する login_id を指定すること！
 	        String testLoginId = "1"; // DBにあるログインID
 
-	        AccountDAO dao = new AccountDAO();
+	        UserDAO dao = new UserDAO();
 	        UserAccount user = dao.findLogin(testLoginId);
 
 	        assertNotNull(user, "ユーザーが見つかるべき");
@@ -22,7 +22,8 @@ class AccountDAOTest {
 	        System.out.println("ユーザー名: " + user.getUsername());
 	        System.out.println("ログインID: " + user.getLoginId());
 	        System.out.println("作成日時: " + user.getCreatedAt());
-	    }
+	   
+	 }
 	
 }
 

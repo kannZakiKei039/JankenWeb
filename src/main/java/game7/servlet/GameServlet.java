@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import game7.DBDAO;
 import game7.Register;
+import game7.dao.DBDAO;
 import game7.service.WebGameService;
 
 

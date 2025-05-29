@@ -1,4 +1,4 @@
-package game7;
+package game7.service;
 
 public interface HandSkinnable {
 	//じゃんけんの手文字列配列（国別）

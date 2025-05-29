@@ -6,14 +6,24 @@ public class User implements Serializable {
 	private String name;//ユーザー名
 	private String pass;//パスワード
 	private String loginId;//ユーザーID
+	private int id;//一意のID
 	
 	public User() {}
 
-	public User(String name, String pass,String loginId) {
+	public User(String name, String pass,String loginId,int id) {
 		super();
 		this.name = name;
 		this.pass = pass;
 		this.loginId= loginId;
+		this.id=id;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {

@@ -53,7 +53,8 @@ public class LoginServlet extends HttpServlet {
 			User user = new User();
 			user.setName(account.getUsername());
 			user.setLoginId(account.getLoginId());
-
+			user.setId(account.getId());
+			
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
 

@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-import game7.DBManager;
 import game7.model.UserAccount;
 
 public class UserDAO {

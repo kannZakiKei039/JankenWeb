@@ -1,10 +1,10 @@
-package game7;//DBと接続
+package game7.dao;//DBと接続
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBManager {
+	class DBManager {
 	private static final String URL ="jdbc:postgresql://localhost:5432/junken";
 	private static final String USER="postgres";
 	private static final String PASSWORD="postgres";

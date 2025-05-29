@@ -8,20 +8,20 @@ import java.time.LocalDateTime;
 
 import jakarta.servlet.ServletException;
 
-import game7.DBManager;
-
-public class DBDAO {
-	public void insertMatch(int playerHand,int computerHand) throws ServletException {
+public class HistoryDAO {
+	public void insertMatch(int id,int playerHand,int computerHand,String result) throws ServletException {
 		
-		String sql = "insert into match_history (play_date,play_hand,computer_hand) values(?,?,?)";
+		String sql = "insert into match_history (user_id,player_hand,cpu_hand,result,play_date) values(?,?,?,?,?)";
 
 		try (
 				Connection con = DBManager.getConnection();
 				PreparedStatement ps = con.prepareStatement(sql)){
-
-			ps.setTimestamp(1, Timestamp.valueOf(LocalDateTime.now()));
+			
+			ps.setInt(1,id);
 			ps.setInt(2,playerHand);
 			ps.setInt(3,computerHand);
+			ps.setString(4, result);
+			ps.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
 
 			ps.executeUpdate();
 			System.out.println("対戦履歴をDBに保存しました");

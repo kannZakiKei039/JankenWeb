@@ -57,7 +57,7 @@ public class RegisterServlet extends HttpServlet {
 		//パスワードをハッシュ化
 		String hashedPassword = PasswordUtil.hashPassword(password);
 
-			//登録処理
+		//登録処理
 		boolean inserted = userDAO.insertUser(username, loginId, hashedPassword);
 		if(inserted) {
 			response.sendRedirect("register_success.jsp");

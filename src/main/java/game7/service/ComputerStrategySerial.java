@@ -1,4 +1,4 @@
-package game7;
+package game7.service;
 
 public class ComputerStrategySerial implements Strategy {
 	int hand;

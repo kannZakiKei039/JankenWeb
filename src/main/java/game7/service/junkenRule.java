@@ -1,4 +1,4 @@
-package game7;
+package game7.service;
 
 public class junkenRule implements HandSkinnable{
 	
@@ -40,5 +40,13 @@ public class junkenRule implements HandSkinnable{
 	 }
 	 public String getHandStr(int hand) {
 		    return handStr[hand];
+		}
+	 
+	 public String getJudgeResultStr(int judge) {
+		    String[] judgeStr = {"引き分け", "負け", "勝ち"};
+		    if (judge >= 0 && judge < judgeStr.length) {
+		        return judgeStr[judge];
+		    }
+		    return "不明";
 		}
 }

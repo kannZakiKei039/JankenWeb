@@ -1,8 +1,8 @@
 package game7.servlet;
 
-import game7.Player;
-import game7.Register;
-import game7.junkenRule;
+import game7.service.Player;
+import game7.service.Register;
+import game7.service.junkenRule;
 
 public class ConsoleGameService {
 	private junkenRule rule= new junkenRule();

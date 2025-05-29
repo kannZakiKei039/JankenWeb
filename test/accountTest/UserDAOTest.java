@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import game7.dao.UserDAO;
 import game7.model.UserAccount;
 
-class AccountDAOTest {
+class UserDAOTest {
 	
 	 @Test
 	    public void testFindLogin() {

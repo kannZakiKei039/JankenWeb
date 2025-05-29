@@ -1,9 +1,5 @@
 package game7.service;
 
-import game7.ComputerStrategyRandom;
-import game7.Strategy;
-import game7.junkenRule;
-
 public class WebGameService {
 	public static final String[] handNames= {"グー","チョキ","パー"};
 

@@ -1,4 +1,4 @@
-package game7;
+package game7.service;
 
 import java.util.Scanner;
 

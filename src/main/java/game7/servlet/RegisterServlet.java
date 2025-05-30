@@ -2,6 +2,7 @@ package game7.servlet;
 
 import java.io.IOException;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -21,9 +22,11 @@ public class RegisterServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+			throws ServletException, IOException{
+	RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/view/register.jsp");
+	dispatcher.forward(request, response);
+}
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -36,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
 		if (username == null || username.isEmpty() ||
 				loginId == null || loginId.isEmpty() ||
 				password == null || password.isEmpty()) {
-			response.sendRedirect("register_input_error.jsp");
+			response.sendRedirect("WEB-INF/view/register_input_error.jsp");
 			return;
 		}
 		UserDAO userDAO = new UserDAO();
@@ -45,12 +48,12 @@ public class RegisterServlet extends HttpServlet {
 		//重複チェック
 		if(userDAO.checkUser(loginId)) {
 			//既に重複してたら重複画面へ
-			response.sendRedirect("register_duplicate.jsp");
+			response.sendRedirect("WEB-INF/view/register_dupkicate.jsp");
 			return;
 		}
 	}catch(Exception e) {
 		e.printStackTrace();//ログに出す
-		response.sendRedirect("register_error.jsp");
+		response.sendRedirect("WEB-INF/view/register_error.jsp");
 		return;
 	}
 		
@@ -60,10 +63,10 @@ public class RegisterServlet extends HttpServlet {
 		//登録処理
 		boolean inserted = userDAO.insertUser(username, loginId, hashedPassword);
 		if(inserted) {
-			response.sendRedirect("register_success.jsp");
+			response.sendRedirect("WEB-INF/register_success.jsp");
 
 		}else{
-			response.sendRedirect("register_error.jsp");
+			response.sendRedirect("WEB-INF/register_error.jsp");
 		}
 		
 		}

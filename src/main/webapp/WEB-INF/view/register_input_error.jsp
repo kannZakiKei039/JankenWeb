@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+入力エラー
+<a href="LoginServlet">戻る</a>
 </body>
 </html>

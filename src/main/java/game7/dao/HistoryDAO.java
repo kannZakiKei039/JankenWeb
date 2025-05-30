@@ -11,7 +11,7 @@ import jakarta.servlet.ServletException;
 public class HistoryDAO {
 	public void insertMatch(int id,int playerHand,int computerHand,String result) throws ServletException {
 		
-		String sql = "insert into match_history (user_id,player_hand,cpu_hand,result,play_date) values(?,?,?,?,?)";
+		String sql = "insert into match_history (user_id,play_hand,cpu_hand,result,play_date) values(?,?,?,?,?)";
 
 		try (
 				Connection con = DBManager.getConnection();

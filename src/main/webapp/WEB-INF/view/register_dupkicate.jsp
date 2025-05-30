@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-入力エラー
+<h1>重複エラー。</h1>
+ログイン情報確認の上、ログインください。
+<a href="LoginServlet">戻る</a>
 </body>
 </html>

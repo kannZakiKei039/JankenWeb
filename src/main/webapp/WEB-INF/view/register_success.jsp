@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ログイン</title>
 </head>
 <body>
-<p>登録に失敗しました。もう一度やり直してください</p>
+<p>登録が完了しました<br>
+<a href="LoginServlet">ログイン</a></p>
 </body>
 </html>

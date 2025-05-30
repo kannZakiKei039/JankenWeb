@@ -1,4 +1,4 @@
-package game7.servlet;
+package game7.service;
 
 import game7.service.Player;
 import game7.service.Register;

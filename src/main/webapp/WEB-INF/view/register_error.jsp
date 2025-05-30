@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-重複エラー
+<p>登録に失敗しました。もう一度やり直してください</p>
+<a href="LoginServlet">戻る</a>
 </body>
 </html>

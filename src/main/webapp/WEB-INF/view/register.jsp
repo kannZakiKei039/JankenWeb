@@ -15,6 +15,6 @@
         <input type="submit" value="登録">
     </form>
 
-    <p><a href="login.jsp">ログイン画面へ戻る</a></p>
+    <p><a href="LoginServlet">ログイン画面へ戻る</a></p>
 </body>
 </html>

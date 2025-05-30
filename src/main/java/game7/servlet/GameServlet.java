@@ -31,7 +31,7 @@ public class GameServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//フォワード
-		RequestDispatcher dispatcher = request.getRequestDispatcher("game.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/game.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -42,7 +42,7 @@ public class GameServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		User loginUser = (User)session.getAttribute("user");
 		 if (loginUser == null) {
-		        response.sendRedirect("login.jsp");
+		        response.sendRedirect("WEB-INF/view/login.jsp");
 		        return;
 		    }
 		
@@ -72,7 +72,7 @@ public class GameServlet extends HttpServlet {
 
 		request.setAttribute("resultMessage", resultMessage);
 		request.setAttribute("resultArray", register.getResult());//履歴表示用
-		RequestDispatcher dispatcher = request.getRequestDispatcher("result.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/result.jsp");
 		dispatcher.forward(request, response);
 	}
 }

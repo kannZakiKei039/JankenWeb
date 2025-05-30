@@ -13,7 +13,7 @@
 	パスワード:<input type="password" name="password" required><br>
 <input type="submit" value="ログイン"><br>
 </form>
-<p><a href="register.jsp">新規登録はこちら</a></p>
+<p><a href="RegisterServlet">新規登録はこちら</a></p>
 <%
 	String error = request.getParameter("error");
 	if("1".equals(error)){
